@@ -11,3 +11,11 @@ chrome.extension.onMessage.addListener(
   	chrome.pageAction.show(sender.tab.id);
     sendResponse();
   });
+
+
+const parentId = chrome.contextMenus.create({
+  type: "normal",
+  title: "Add to Tril",
+  contexts: ["all"],
+  onclick: function(){ alert("menu clicked!"); }
+});
